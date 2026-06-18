@@ -9,7 +9,7 @@
           "parameters": [
             {
               "name": "x-apikey",
-              "value": "d4e62fea35a9e0fb95434f4a3680ffa6501143180e3677411945106627162020"
+              "value": "YOUR_API_KEY_HERE"
             }
           ]
         },
@@ -17,10 +17,7 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.4,
-      "position": [
-        64,
-        0
-      ],
+      "position": [64, 0],
       "id": "7540bee3-5840-4b75-8f54-4ced5f388b52",
       "name": "HTTP Request"
     },
@@ -50,10 +47,7 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
-      "position": [
-        224,
-        0
-      ],
+      "position": [224, 0],
       "id": "abeeb81b-54c8-4d9d-bf55-d3ef60566a64",
       "name": "If"
     },
@@ -70,19 +64,9 @@
       },
       "type": "n8n-nodes-base.slack",
       "typeVersion": 2.5,
-      "position": [
-        432,
-        -96
-      ],
+      "position": [432, -96],
       "id": "53bb26b3-17e5-448d-b388-14423406e28a",
-      "name": "Send a message",
-      "webhookId": "39ad74c8-6c79-4cf7-ad4a-3d8864b399d5",
-      "credentials": {
-        "slackApi": {
-          "id": "9T5KPRKm77R9Wbsl",
-          "name": "Slack account"
-        }
-      }
+      "name": "Send a message"
     },
     {
       "parameters": {
@@ -97,19 +81,9 @@
       },
       "type": "n8n-nodes-base.slack",
       "typeVersion": 2.5,
-      "position": [
-        432,
-        96
-      ],
+      "position": [432, 96],
       "id": "643d0642-98df-421e-9c00-22f8e5210b7c",
-      "name": "Send a message1",
-      "webhookId": "b236506b-829a-4967-a631-f165f9c95cfc",
-      "credentials": {
-        "slackApi": {
-          "id": "9T5KPRKm77R9Wbsl",
-          "name": "Slack account"
-        }
-      }
+      "name": "Send a message1"
     },
     {
       "parameters": {
@@ -127,17 +101,23 @@
       },
       "type": "n8n-nodes-base.formTrigger",
       "typeVersion": 2.6,
-      "position": [
-        -336,
-        0
-      ],
+      "position": [-336, 0],
       "id": "35c32338-6d0b-467b-83a1-f6177c5b2a7d",
-      "name": "On form submission",
-      "webhookId": "b99a581f-0aca-4703-9a29-34c6912a5c88"
+      "name": "On form submission"
     }
   ],
-  "pinData": {},
   "connections": {
+    "On form submission": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
     "HTTP Request": {
       "main": [
         [
@@ -166,31 +146,6 @@
           }
         ]
       ]
-    },
-    "On form submission": {
-      "main": [
-        [
-          {
-            "node": "HTTP Request",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
     }
-  },
-  "active": false,
-  "settings": {
-    "executionOrder": "v1",
-    "binaryMode": "separate",
-    "availableInMCP": false
-  },
-  "versionId": "2ee62ba7-2db4-4d66-ac53-8554a1243b03",
-  "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "7d4bce82cee9319f909a4306411c7bf3cda45c4fa873a0b98cb4f091bdc7db22"
-  },
-  "nodeGroups": [],
-  "id": "GldkCV6eQ6adlhhe",
-  "tags": []
+  }
 }
