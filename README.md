@@ -1,4 +1,4 @@
-# IP Reputation Checker
+# Automated IP Reputation Checker
 
 An n8n workflow that checks the reputation of an IP address using the VirusTotal API and sends notifications to Slack.
 
@@ -91,6 +91,7 @@ Do not upload API keys, tokens, or credentials to GitHub.
 
 David Khoury
 
-Computer and Communication Engineering Student
+Computer Engineering Student
+Specializing in Systems & Network Engineering
 
 
